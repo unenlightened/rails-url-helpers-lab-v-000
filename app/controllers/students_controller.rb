@@ -9,7 +9,6 @@ class StudentsController < ApplicationController
   end
 
   def activate
-    set_student
     binding.pry
     redirect_to student_path
   end
