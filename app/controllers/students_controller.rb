@@ -9,7 +9,11 @@ class StudentsController < ApplicationController
   end
 
   def activate
-    set_student.active = !set_student.active
+    if set_student.active == true 
+      set_student.active = false
+    else
+      set_student.active = false
+    end
     redirect_to student_path
   end
 
