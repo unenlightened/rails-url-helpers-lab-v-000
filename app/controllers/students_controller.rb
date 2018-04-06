@@ -9,8 +9,7 @@ class StudentsController < ApplicationController
   end
 
   def activate
-    set_student
-    binding.pry
+    set_student.update(active: !set_student.active)
     redirect_to student_path
   end
 
